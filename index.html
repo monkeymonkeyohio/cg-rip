@@ -80,7 +80,7 @@ window.fetch = async function (...args) {
   if (typeof url === "string" && url.includes("https://files.growden.io/static/17z53627584")) {
     const newUrl = url.replace(
       "https://files.growden.io/static/17z53627584",
-      "StreamingAssets/aa17z53627584/WebGL"
+      "./StreamingAssets/aa17z53627584/WebGL"
     );
     args[0] = newUrl;
   }
@@ -97,7 +97,7 @@ window.fetch = async function (...args) {
 
     async function waitForSDKThenStart(callback) {
   try {
-    const zipUrl = "Build/3ccec5462abb1bddeb508a23f3ef9d51.wasm.zip";
+    const zipUrl = "./Build/3ccec5462abb1bddeb508a23f3ef9d51.wasm.zip";
     const res = await fetch(zipUrl);
     if (!res.ok) throw new Error(`Failed to fetch zip: ${res.status} ${res.statusText}`);
     const zipData = await res.arrayBuffer();
@@ -475,7 +475,7 @@ window.fetch = async function (...args) {
       };
       
       document.body.appendChild(unityLoaderScript);
-    });</script><noscript>Please enable JavaScript to run this game! Learn how <a href="https://support.google.com/adsense/answer/12654" target="_blank">here</a>.</noscript><script src="s/cursor.js" defer="defer"></script><script src="s/pwa.js" defer="defer"></script><script src="s/utils.js" defer="defer"></script><script src="s/pinger.js" defer="defer"></script><script src="s/exit-intent.js" defer="defer"></script><script>if ('serviceWorker' in navigator) {
+    });</script><noscript>Please enable JavaScript to run this game! Learn how <a href="https://support.google.com/adsense/answer/12654" target="_blank">here</a>.</noscript><script src="./s/cursor.js" defer="defer"></script><script src="./s/pwa.js" defer="defer"></script><script src="./s/utils.js" defer="defer"></script><script src="./s/pinger.js" defer="defer"></script><script src="./s/exit-intent.js" defer="defer"></script><script>if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
         navigator.serviceWorker.register('s/sw.js');
       });
