@@ -97,7 +97,7 @@ window.fetch = async function (...args) {
 
     async function waitForSDKThenStart(callback) {
   try {
-    const zipUrl = "./Build/3ccec5462abb1bddeb508a23f3ef9d51.wasm.zip";
+    const zipUrl = "./cg-rip/Build/3ccec5462abb1bddeb508a23f3ef9d51.wasm.zip";
     const res = await fetch(zipUrl);
     if (!res.ok) throw new Error(`Failed to fetch zip: ${res.status} ${res.statusText}`);
     const zipData = await res.arrayBuffer();
@@ -351,7 +351,7 @@ window.fetch = async function (...args) {
         "acceptedAnswer": { "@type": "Answer", "text": "You can unlock and equip skins, items, and bundles in the Shop and Inventory." }
       }
     ]
-  }</script><script src="Build/88e4e230596a7f739263fc16965e0da7.loader.js"></script><script>// Safe build URL
+  }</script><script src="./cg-rip/Build/88e4e230596a7f739263fc16965e0da7.loader.js"></script><script>// Safe build URL
     function getSafeBuildURL() {
       try {
         if (typeof window.SDK?.getBuildURL === "function") {
@@ -389,14 +389,14 @@ window.fetch = async function (...args) {
 
     waitForSDKThenStart((wasmurl) => {
       var buildUrl = getSafeBuildURL();
-      var loaderUrl = buildUrl + "/88e4e230596a7f739263fc16965e0da7.loader.js";
+      var loaderUrl = buildUrl + "./cg-rip/88e4e230596a7f739263fc16965e0da7.loader.js";
       // Determine if we're on mobile
       var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
       var  safeStaticResolutionScaleMulti = getSafeStaticResolutionScaleMulti();
       var config = {
-        dataUrl: buildUrl + "/a7371a7fda98b71ac1cfdee56a79772b.data",
-        frameworkUrl: buildUrl + "/713c295cbe0e74345cd32a235900a34f.framework.js",
+        dataUrl: buildUrl + "./cg-rip/a7371a7fda98b71ac1cfdee56a79772b.data",
+        frameworkUrl: buildUrl + "./cg-rip/713c295cbe0e74345cd32a235900a34f.framework.js",
         codeUrl: wasmurl,
         streamingAssetsUrl: getSafeStreamingAssetsUrl(),
         companyName: "LEGiON Platforms",
@@ -475,7 +475,7 @@ window.fetch = async function (...args) {
       };
       
       document.body.appendChild(unityLoaderScript);
-    });</script><noscript>Please enable JavaScript to run this game! Learn how <a href="https://support.google.com/adsense/answer/12654" target="_blank">here</a>.</noscript><script src="./s/cursor.js" defer="defer"></script><script src="./s/pwa.js" defer="defer"></script><script src="./s/utils.js" defer="defer"></script><script src="./s/pinger.js" defer="defer"></script><script src="./s/exit-intent.js" defer="defer"></script><script>if ('serviceWorker' in navigator) {
+    });</script><noscript>Please enable JavaScript to run this game! Learn how <a href="https://support.google.com/adsense/answer/12654" target="_blank">here</a>.</noscript><script src="./cg-rip/s/cursor.js" defer="defer"></script><script src="./cg-rip/s/pwa.js" defer="defer"></script><script src="./cg-rip/s/utils.js" defer="defer"></script><script src="./cg-rip/s/pinger.js" defer="defer"></script><script src="./cg-rip/s/exit-intent.js" defer="defer"></script><script>if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
         navigator.serviceWorker.register('s/sw.js');
       });
